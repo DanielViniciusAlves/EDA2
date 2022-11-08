@@ -22,7 +22,7 @@ struct node *create_new_node(int value){
 }
 
 // This function will insert at the head of the list a node, the double pointer is explained above!
-struct node* insert_node_at_head(struct node *temp, struct node **head){
+struct node *insert_node_at_head(struct node *temp, struct node **head){
     temp->next=*head;
     *head=temp;
     return *head;
