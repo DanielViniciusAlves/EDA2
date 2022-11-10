@@ -5,8 +5,10 @@
 The insertion sort is one of the most simple types of sorting, it will work similar to sorting a card. That means that the array is divided in sorted and unsorted, and the values unsorted are putted in the correct point in the sorted part of the array.
 
 The idea behind the implementation of this type of sorting is that considering a array filled with numbers, we will get the first two elements and compare then, once is defined the smallest element it will rearrange the array putting the smallest one in the front and so on comparing the next two elements. This idea can be better defined by the animation:
-
-
+\
+\
+\
+\
 [<img src="https://developer.download.nvidia.com/devblogs/DSAlgorithmGuide.gif">](https://developer.nvidia.com/blog/insertion-sort-explained-a-data-scientists-algorithm-guide/)
 
 
@@ -23,8 +25,12 @@ The worst case will be when the array is in a decreasing order and the best case
 ### What is Stability to a Sorting Algorithm?
 
 Stability defines the ability of the algorithm to maintain the same order from the keys in the input data. Tha means that after ordering the data the keys that are equals will be arranged in the same way as th input.
-
+\
+\
+\
+\
 [<img src="https://media.geeksforgeeks.org/wp-content/uploads/20220825145858/del.png">](https://www.geeksforgeeks.org/stable-and-unstable-sorting-algorithms/)
+
 
 ### What is the Insertion Sort Stability?
 
