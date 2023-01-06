@@ -12,9 +12,11 @@ The Quick Sort is similar to the Merge Sort, in the idea to use Divide and Conqu
 
 ## Complexity Level
 
-Another important information about the Merge Sort is that the level of complexity is O(n log n). A important point about Merge Sort complexity is that doesn't matter the way that the array is sorted, the complexity level will remain the same, this means that there are no worst case every single case will be a O(n log n) complexity level.  
+Another important information about the Quick Sort is that the level of complexity is O(n log n). But It's important to notice that the complexity isn't constant to all cases, this means that when the array is arrange in a decrescent way and the algorithm is trying to organize in a crescent way then the Quick Sort will have a complexity level of  O(n2). 
 
-## Merge Sort Stability
+This may produce the question of why choose a Quick Sort and not the Merge Sort since both of then have the same complexity level. Well, the first advantage of the Quick Sort is that It doesn't require additional space to organize the array, another important point is that the implementation of this sorting algorithm is faster than other kinds of algorithm that have a O(log n), this is done by making the decisions choice of the implementation smarter.
+
+## Quick Sort Stability
 
 ### What is Stability to a Sorting Algorithm?
 
@@ -28,8 +30,6 @@ Stability defines the ability of the algorithm to maintain the same order from t
 
 ### What is the Merge Sort Stability?
 
-After defining what is stability for sorting algorithms we can see that the IMerge Sort is stable. This means that: 
+After defining what is stability for sorting algorithms we can see that the Quick Sort is not stable.  This means that if there are two elements in the array with the same value, their relative order may not be preserved after the array is sorted.equivalent items in the list, resulting in a stable sorting algorithm.
 
- During the merging process, we preserve the ordering of equivalent objects. If the first element of the left list being merged is equivalent to the first element of the right list, we always insert the element from the left list before the right list. Through this process we always preserve the inital relative ordering of equivalent items in the list, resulting in a stable sorting algorithm.
-
--- <cite>Kelly Lin, https://inst.eecs.berkeley.edu/~cs61b/sp20/docs/sorting_notes.html</cite>
+**Important: most of the cases the Merge Sort is not stable, but can be implemented in a way to maintain the stability. Most of the ways is not done this way, since some of the performance is lost.**
