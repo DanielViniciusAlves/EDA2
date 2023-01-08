@@ -33,3 +33,4 @@ Stability defines the ability of the algorithm to maintain the same order from t
 After defining what is stability for sorting algorithms we can see that the Quick Sort is not stable.  This means that if there are two elements in the array with the same value, their relative order may not be preserved after the array is sorted.equivalent items in the list, resulting in a stable sorting algorithm.
 
 **Important: most of the cases the Merge Sort is not stable, but can be implemented in a way to maintain the stability. Most of the ways is not done this way, since some of the performance is lost.**
+
