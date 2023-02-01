@@ -36,6 +36,45 @@ void quick_sort(int array[], int first, int last){
     }
 }  
 
+void merge(int array[], int left, int right, int middle){
+    int l_length = middle - left +1;
+    int r_length = right - middle;
+
+    int temp_l[l_length];
+    int temp_r[r_length];
+
+    int j, i, k;
+
+    for(int i=0; i<l_length; i++){
+        temp_l[i]=array[left+i];
+    }
+    for(int i=0; i<r_length; i++){
+        temp_r[i]=array[middle +  1 + i];
+    }
+    
+    for(i=0, j=0, k=left; k<=right; k++){
+        if((i<l_length) && (j>=r_length || temp_l[i]<=temp_r[j])){
+            array[k]=temp_l[i];
+            i++;
+        } else{
+            array[k]=temp_r[j];
+            j++;
+        }
+    }
+
+}
+
+void merge_sort(int array[], int left, int right){
+    if(left<right){
+        int middle = left + (right - left) /2;
+
+        merge_sort(array, left, middle);
+        merge_sort(array, middle+1, right);
+
+        merge(array, left, right, middle);
+    }
+}
+
 int main() {
     int n_products, n_pages, products_page;
     scanf("%d %d %d", &n_products, &n_pages, &products_page);
@@ -45,7 +84,7 @@ int main() {
     }
     // clock_t begin = clock();
 
-    quick_sort(arr, 0, n_products - 1);
+    merge_sort(arr, 0, n_products - 1);
 
     int x;
     x = products_page*n_pages;
